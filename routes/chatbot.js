@@ -7,11 +7,11 @@ const express=require('express');
 const router=express.Router();
 
 // Dialogflow configuration
-const projectID="chatbot-dwgf";
+const projectID=process.env.project_id;
 const sessionID=uuid.v4();   //Creates a unique session for a user
 const sessionClient=new Dialogflow.SessionsClient();    // used for interaction by user
 
-console.log(process.env.GOOGLE_APPLICATION_CREDENTIALS);
+// console.log(process.env.GOOGLE_APPLICATION_CREDENTIALS);
 
 router.post('/',async(req,res)=>{
     const message=req.body.message;
