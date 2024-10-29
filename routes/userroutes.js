@@ -2,8 +2,8 @@ const express=require('express');
 
 const router=express.Router();
 
-const User=require('./../models/User.js');
-const { generatetoken, jwtMiddleware } = require('../jwt');
+const User=require('../models/User.js');
+const { generatetoken, jwtMiddleware } = require('../jwt.js');
 
 // Signup route
 router.post('/signup',async(req,res)=>{

@@ -21,8 +21,11 @@ app.use(bodyParser.json());
 
 require('dotenv').config();
 
-const userroutes=require('./routes/userroutes');
+const userroutes=require('./routes/userroutes.js');
+const chatbotroutes=require('./routes/chatbot.js');
+
 app.use('/api2/person',userroutes);
+app.use('/api2/chatbot',chatbotroutes);
 
 PORT_NO=process.env.PORT || 3000;
 
