@@ -23,9 +23,11 @@ require('dotenv').config();
 
 const userroutes=require('./routes/userroutes.js');
 const chatbotroutes=require('./routes/chatbot.js');
+const paymentroutes=require('./routes/paymentroutes.js');
 
 app.use('/api2/person',userroutes);
 app.use('/api2/chatbot',chatbotroutes);
+app.use('/api2/payment',paymentroutes);
 
 PORT_NO=process.env.PORT || 3000;
 
