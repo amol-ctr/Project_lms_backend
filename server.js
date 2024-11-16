@@ -4,7 +4,7 @@ const app=express();
 const cors=require('cors');
 
 const corsOptions={
-    origin:'http://localhost:5173',
+    origin:'https://project-lms-frontend1.onrender.com',
     methods: "GET,POST,PATCH,PUT,DELETE,HEAD",
     credentials:true
 }
